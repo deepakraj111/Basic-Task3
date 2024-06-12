@@ -1,0 +1,100 @@
+/* src/WeatherApp.css */
+
+.weather-app {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s ease;
+  position: relative;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  animation: borderColorChange 2s linear infinite;
+  z-index: 1; /* Place it above the content */
+}
+
+@keyframes borderColorChange {
+  0% { border-color: rgb(245, 26, 245); }
+  11% { border-color: rgb(160, 54, 235); }
+  22% { border-color: rgb(77, 77, 237); }
+  33% { border-color: rgb(72, 239, 72); }
+  44% { border-color: rgb(243, 243, 69); }
+  55% { border-color: rgb(238, 172, 49); }
+  66% { border-color: rgb(241, 52, 52); }
+  77% { border-color: rgb(179, 80, 9); }
+  88% { border-color: rgb(5, 5, 239); }
+  100% { border-color: rgb(26, 190, 240); }
+}
+
+.image-text {
+  background: linear-gradient(to right, rgb(48, 230, 48), yellow, rgb(240, 166, 178));
+  color: rgb(78, 76, 76); /* Change text color */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.weather-app.default {
+  background: url("../images/wf-bg.jpg") no-repeat center center/cover;
+  color: white;
+}
+
+.weather-app.sunny {
+  background: url("../images/sunny.jpg") no-repeat center center/cover;
+  color: black;
+}
+
+.weather-app.cloudy {
+  background: url("../images/cloudy.jpg") no-repeat center center/cover;
+  color: white;
+}
+
+.weather-app.rainy {
+  background: url("../images/rainy.jpg") no-repeat center center/cover;
+  color: white;
+}
+
+.weather-app.snowy {
+  background: url("../images/snowy.jpg") no-repeat center center/cover;
+  color: black;
+}
+
+form {
+  margin: 20px 0;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 1em;
+  border: 2px solid black;
+}
+
+input {
+  background: linear-gradient(to right, rgb(144, 253, 144), rgb(157, 157, 238));
+  color: rgb(100, 92, 92);
+}
+
+button {
+  margin-left: 10px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: chocolate;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(89, 28, 78, 0.8);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
